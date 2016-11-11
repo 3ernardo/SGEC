@@ -1,7 +1,5 @@
 package system;
 
-import java.util.Arrays;
-
 public class Funcionario {
 
 	private String nome;
@@ -15,11 +13,28 @@ public class Funcionario {
 		this.numCompetencias = numCompetencias;
 		this.competencias = competencias;
 	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public String[] getCompetencias() {
+		return competencias;
+	}
 
+	public String listaComp() {
+		String lista = "";
+		for (int i = 0; i < numCompetencias; i++) {
+			lista += competencias[i];
+			if (i != numCompetencias - 1) {lista += ", ";}
+		}
+		return lista;
+	}
+	
 	@Override
 	public String toString() {
-		return "Funcionario [nome=" + nome + ", salario=" + salario + ", numCompetencias=" + numCompetencias
-				+ ", competencias=" + Arrays.toString(competencias) + "]";
+		return "Funcionario [Nome: " + nome + ", Salário: " + salario + ", Número de competências: " + numCompetencias
+				+ ", Competencias: " + listaComp() + "]";
 	}
 	
 	

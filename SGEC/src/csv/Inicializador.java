@@ -10,10 +10,10 @@ import system.Projeto;
 
 public class Inicializador {
 
-	public Vetor<Funcionario> vetorFuncionario = new Vetor<>();
-	public Vetor<Projeto> vetorProjeto = new Vetor<>();
-	public Vetor<Competencia> vetorCompetencia = new Vetor<>();
-	public Vetor<Colaborador> vetorColaborador = new Vetor<>();
+	public static Vetor<Funcionario> vetorFuncionario = new Vetor<>();
+	public static Vetor<Projeto> vetorProjeto = new Vetor<>();
+	public static Vetor<Competencia> vetorCompetencia = new Vetor<>();
+	public static Vetor<Colaborador> vetorColaborador = new Vetor<>();
 	
 	
 	public void gravaFuncionarios() throws FileNotFoundException {
@@ -23,7 +23,6 @@ public class Inicializador {
 		reader.skipLine();
 		while (reader.hasNext()) {
 			Funcionario teste = reader.readObject();
-			//System.out.println(teste);
 			vetorFuncionario.vetorAdicionaElemento(teste);
 		}
 		reader.close();

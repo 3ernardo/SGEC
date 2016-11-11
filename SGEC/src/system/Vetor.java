@@ -55,6 +55,7 @@ public class Vetor<V> {
 			dados[i] = dados[i+1];
 		}
 		dados[dados.length - 1] = null;
+		numElementos--;
 	}
 	
 	

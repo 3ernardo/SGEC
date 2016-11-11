@@ -2,7 +2,7 @@ package system;
 
 public class Menu {
 
-	private Opcao[] opcoes = new Opcao[9];
+	private Opcao[] opcoes = new Opcao[12];
 	private int numOpcoes = 0;
 	
 	public void mostraMenu() {

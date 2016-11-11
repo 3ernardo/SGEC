@@ -13,9 +13,21 @@ public class Colaborador {
 		this.competencia = competencia;
 	}
 
+	public String getProjeto(){
+		return nomeProj;
+	}
+	
+	public String getFuncionario(){
+		return nomeFunc;
+	}
+	
+	public String getCompetencia(){
+		return competencia;
+	}
+	
 	@Override
 	public String toString() {
-		return "Colaborador [nomeProj=" + nomeProj + ", nomeFunc=" + nomeFunc + ", competencia=" + competencia + "]";
+		return "Colaborador [Projeto: " + nomeProj + ", Funcionário: " + nomeFunc + ", Competencia: " + competencia + "]";
 	}
 		
 }

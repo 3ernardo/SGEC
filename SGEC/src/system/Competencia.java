@@ -7,10 +7,14 @@ public class Competencia {
 	public Competencia(String nome) {
 		this.nome = nome;
 	}
+	
+	public String getNome() {
+		return nome;
+	}
 
 	@Override
 	public String toString() {
-		return "Competencia [nome=" + nome + "]";
+		return "Competencia [Descrição: " + nome + "]";
 	}	
 	
 }

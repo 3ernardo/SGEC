@@ -1,7 +1,6 @@
 package system;
 
 import java.time.LocalDate;
-import java.util.Arrays;
 
 public class Projeto {
 	
@@ -19,11 +18,28 @@ public class Projeto {
 		this.numCompetencias = numCompetencias;
 		this.competencias = competencias;
 	}
+	
+	public String getNome() {
+		return nome;
+	}
 
+	public String[] getCompetencias() {
+		return competencias;
+	}
+	
+	public String listaComp() {
+		String lista = "";
+		for (int i = 0; i < numCompetencias; i++) {
+			lista += competencias[i];
+			if (i != numCompetencias - 1) {lista += ", ";}
+		}
+		return lista;
+	}
+	
 	@Override
 	public String toString() {
-		return "Projeto [nome=" + nome + ", dataInicio=" + dataInicio + ", dataFim=" + dataFim + ", numCompetencias="
-				+ numCompetencias + ", competencias=" + Arrays.toString(competencias) + "]";
+		return "Projeto [Nome: " + nome + ", Data de início: " + dataInicio + ", Data de término: " + dataFim + ", Número de competências: "
+				+ numCompetencias + ", Competencias: " + listaComp() + "]";
 	}
 
 }
